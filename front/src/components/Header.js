@@ -5,6 +5,19 @@ import { Link } from 'react-router-dom'
 import './Header.css'
 
 const Header = () => {
+
+    // Sticky header
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('.Header')
+        const topLimit = header.offsetTop
+        if (window.pageYOffset > topLimit) {
+            header.classList.add('Sticky')
+        }
+        if (window.pageYOffset <= 320) {
+            header.classList.remove('Sticky')
+        }
+    })
+
     return (
         <div className="Header">
             <Link className="Header-Link">Home</Link>

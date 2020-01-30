@@ -1,22 +1,32 @@
+/* General */
 .Header {
     display: flex;
     flex-flow: row wrap;
     background: rgb(214, 214, 183);
 }
 
+.Sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Links */
 .Header-Link {
     transition-duration: .5s;
     width: 5%;
     padding: 1.5%;
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(50, 50, 50);
     font-family: 'Korean Calligraphy';
     text-align: center;
     border: 2px solid transparent;
 }
 
+/* Hover effects */
 .Header-Link:hover {
     background: rgb(194, 194, 164);
     border-bottom: 2px solid rgb(255, 0, 0);
     border-top: 2px solid rgb(255, 0, 0);
+    color: rgb(0, 0, 0);
 }
