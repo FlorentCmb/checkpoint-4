@@ -6,6 +6,7 @@ const router = express.Router()
 const connect = require('../config')
 
 /* Routes */
+
 // Add a ticket
 router.post('/:show_id/add', (req, res) => {
     const id = req.params.show_id
