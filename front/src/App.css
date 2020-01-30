@@ -1,4 +1,22 @@
+/* Fonts */
+@font-face {
+  font-family: 'Kashima';
+  src: local('Kashima'), url('./fonts//kashima_brush/Kashima.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Korean Calligraphy';
+  src: local('Korean Calligraphy'), url('./fonts/korean_calligraphy/Korean_Calligraphy.ttf') format('truetype');
+}
 .App {
   margin: 0;
   padding: 0;
+  font-size: 500%;
+}
+
+.First {
+  font-family: 'Kashima';
+}
+
+.Second {
+  font-family: 'Korean Calligraphy';
 }
