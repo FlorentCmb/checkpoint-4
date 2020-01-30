@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
     })
 })
 // Add a show
-router.post('/', (req, res) => {
+router.post('/add', (req, res) => {
     const data = req.body
     // Remove tickets data from the req.body ?
     const showData = data.split(5, 1)
@@ -30,7 +30,7 @@ router.post('/', (req, res) => {
         else {
             // Add tickets query here
             for (let i = 0; i < data.nb_places; i++) {
-                connect.query('SELECT MAX(shows.id) AS last_id FROM shows; INSERT INTO tickets SET (price, id_show, id_user) VALUES (?, last_id, NULL)', ticketData, (err2, results2) => {
+                connect.query(`INSERT INTO tickets SET (price, id_show, id_user) VALUES (?, LAST_INSERT_ID(), NULL)`, ticketData, (err2, results2) => {
                     if (err2) {
                         res.sendStatus(500)
                     }
