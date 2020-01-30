@@ -18,7 +18,6 @@ router.post('/:show_id/add', (req, res) => {
         else {
             // If there's a positive number of remaining available tickets
             if (result[0].nb_available_tickets > 0) {
-                console.log('Ok')
                 const userData = {
                     id_show: id,
                     id_user: 1
