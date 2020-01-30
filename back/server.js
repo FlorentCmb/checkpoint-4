@@ -16,6 +16,8 @@ const connect = require('./config')
 /* Routes */
 // Shows
 app.use('/shows', require('./routes/shows'))
+// Tickets
+app.use('/tickets', require('./routes/tickets'))
 
 // Listen
 app.listen(port, error => {
