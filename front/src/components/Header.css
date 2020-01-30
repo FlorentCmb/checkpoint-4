@@ -1,9 +1,22 @@
 .Header {
     display: flex;
     flex-flow: row wrap;
+    background: rgb(214, 214, 183);
 }
 
 .Header-Link {
     transition-duration: .5s;
-    width: 10%;
+    width: 5%;
+    padding: 1.5%;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Korean Calligraphy';
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.Header-Link:hover {
+    background: rgb(194, 194, 164);
+    border-bottom: 2px solid rgb(255, 0, 0);
+    border-top: 2px solid rgb(255, 0, 0);
 }
