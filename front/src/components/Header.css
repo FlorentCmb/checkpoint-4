@@ -1,0 +1,9 @@
+.Header {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.Header-Link {
+    transition-duration: .5s;
+    width: 10%;
+}
