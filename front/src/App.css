@@ -7,7 +7,11 @@
   font-family: 'Korean Calligraphy';
   src: local('Korean Calligraphy'), url('./fonts/korean_calligraphy/Korean_Calligraphy.ttf') format('truetype');
 }
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+/* General */
 .App {
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
 }

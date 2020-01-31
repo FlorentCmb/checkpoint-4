@@ -17,6 +17,18 @@ router.get('/', (req, res) => {
         }
     })
 })
+// Get a show
+router.get('/:id', (req, res) => {
+    const id = req.params.id
+    connect.query('SELECT * FROM shows WHERE id=?', id, (err, results) => {
+        if (err) {
+            res.sendStatus(500)
+        }
+        else {
+            res.status(200).json(results)
+        }
+    })
+})
 // Add a show
 router.post('/add', (req, res) => {
     const data = req.body
