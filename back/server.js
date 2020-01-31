@@ -1,6 +1,7 @@
 /* Initialization */
 // Express
 const express = require('express')
+const cors = require('cors')
 const app = express()
 // Body Parser
 const bodyParser = require('body-parser')
@@ -8,17 +9,18 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
     extended: true
 }))
+// CORS settings
+const corsOptions = {
+    origin: 'http://localhost:3000',
+    optionsSuccessStatus: 200
+  }
 // Port
 const port = 5005
 // Config files (mysql)
 const connect = require('./config')
 
 // CORS
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "http://localhost:3000")
-    res.header("Access-Control-Allow-Header", "Origin, X-Requested-With, Content-Type, Accept")
-    next()
-})
+app.use(cors(corsOptions))
 
 /* Routes */
 // Shows

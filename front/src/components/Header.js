@@ -11,9 +11,11 @@ const Header = () => {
 
     // Call the backend
     useEffect(() => {
-        Axios.get('localhost:5005/shows')
-            .then(res => setShows(res.data))
-            .then(console.log(shows))
+        Axios.get('http://localhost:5005/shows')
+            .then(res => {
+                console.log(res.data)
+                setShows(res.data)
+            })
     }, [])
 
     // Sticky header
