@@ -1,0 +1,8 @@
+.Banner {
+    display: block;
+    height: 50vh;
+    background-image: url('https://departmentofwandering.com/wp-content/uploads/2018/08/classic-japan-3-1140x500.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+}
