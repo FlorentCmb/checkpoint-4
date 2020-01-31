@@ -1,22 +1,10 @@
 // Librairies
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import Axios from 'axios'
 // Styles
 import './Header.css'
 
 const Header = () => {
-
-    const [shows, setShows] = useState()
-
-    // Call the backend
-    useEffect(() => {
-        Axios.get('http://localhost:5005/shows')
-            .then(res => {
-                console.log(res.data)
-                setShows(res.data)
-            })
-    }, [])
 
     // Sticky header
     window.addEventListener('scroll', () => {

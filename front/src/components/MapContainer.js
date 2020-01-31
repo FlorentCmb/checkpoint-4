@@ -23,4 +23,4 @@ const MapContainer = ({ google }) => {
 
 export default GoogleApiWrapper({
     apiKey: ''
-  })(MapContainer);
+  })(MapContainer)
