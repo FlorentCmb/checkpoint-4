@@ -20,9 +20,9 @@ const Header = () => {
 
     return (
         <div className="Header">
-            <Link className="Header-Link">Home</Link>
-            <Link className="Header-Link">Show list</Link>
-            <Link className="Header-Link">Contact</Link>
+            <Link to="/" className="Header-Link">Home</Link>
+            <Link to="/" className="Header-Link">Show list</Link>
+            <Link to="/" className="Header-Link">Contact</Link>
         </div>
     )
 }
