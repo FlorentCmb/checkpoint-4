@@ -3,6 +3,7 @@
     display: flex;
     flex-flow: row wrap;
     background: rgb(214, 214, 183);
+    z-index: 999;
 }
 
 .Sticky {
