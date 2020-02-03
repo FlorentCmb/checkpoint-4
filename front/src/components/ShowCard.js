@@ -8,6 +8,7 @@ const ShowCard = ({ show }) => {
 
     // States
     const [ticketAvailable, setTicketAvailable] = useState(false)
+    const [gotTicket, setGotTicket] = useState(false)
 
     // Verify the number of available tickets
     useEffect(() => {
@@ -50,20 +51,23 @@ const ShowCard = ({ show }) => {
             data: []
         })
             .then(response => {
-                if (response) alert('Ticket bought !')
+                if (response) {
+                    alert('Ticket bought !')
+                    setGotTicket(true)
+                }
             })
     }
 
     return (
         <div className="ShowCard">
-            <div className="ShowCard-Border"></div>
+            <img className="ShowCard-Image" src={show.img} />
             <div className="ShowCard-Content">
                 <h4 className="ShowCard-Title">{show.name}</h4>
                 <p className="ShowCard-Text">
                     {dateFormater(show.s_date, show.e_date)}{'\n'}
                     {show.location}
                 </p>
-                {ticketAvailable ? (<input className="ShowCard-Button" type="button" value="Get a ticket now !" onClick={getTicket} />) : `There's no more tickets`}
+                {ticketAvailable ? !gotTicket ? (<input className="ShowCard-Button" type="button" value={`Get a ticket now !`} onClick={getTicket} />) : `You already have a ticket` : `There's no more tickets`}
             </div>
         </div>
     )
