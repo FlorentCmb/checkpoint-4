@@ -5,7 +5,6 @@ import Axios from 'axios'
 // Components
 import Header from './components/Header'
 import Banner from './components/Banner'
-// import MapContainer from './components/MapContainer'
 import ShowList from './screens/ShowList'
 // Styles
 import './App.css'
@@ -40,5 +39,4 @@ const App = () => {
     </div>
   )
 }
-// AIzaSyAlOLVg1fU7eDCgtzg0PFpyMdZWCSI_S6A
 export default App
